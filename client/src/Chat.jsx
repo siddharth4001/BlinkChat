@@ -19,7 +19,7 @@ export default function Chat() {
         connectToWs();
     }, [selectedUserId]);
 
-
+    //trie to reconnect whenever a user tries to disconnect from the server 
     function connectToWs() {
         const ws = new WebSocket('ws://localhost:4040');
         setWs(ws);
