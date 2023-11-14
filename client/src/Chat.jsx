@@ -126,7 +126,7 @@ export default function Chat() {
 
     return (
         <div className="flex h-screen">
-            <div className="bg-white w-1/3 flex flex-col">
+            <div className="bg-blue-100 w-1/3 flex flex-col">
                 <div className="flex-grow">
                     <Logo />
                     {Object.keys(onlinePeopleExlOurUser).map(userId => (
@@ -156,11 +156,11 @@ export default function Chat() {
                         Logout</button>
                 </div>
             </div>
-            <div className="flex flex-col bg-blue-100 w-2/3 p-2">
+            <div className="flex flex-col bg-blue-300 w-2/3 p-2">
                 <div className="flex-grow">
                     {!selectedUserId && (
                         <div className="flex h-full flex-grow items-center justify-center">
-                            <div className="text-gray-300">&larr; Select a person from the sidebar</div>
+                            <div className="text-black">&larr; Select a person from the sidebar</div>
                         </div>
                     )}
                     {!!selectedUserId && (

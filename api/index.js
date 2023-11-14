@@ -9,6 +9,7 @@ const User = require('./models/User');
 const Message = require('./models/Message');
 const ws = require('ws');
 const fs = require('fs');
+const PORT = process.env.PORT_NO || '4040';
 
 dotenv.config();
 mongoose.connect(process.env.mongo_url);
@@ -115,7 +116,7 @@ app.post('/register', async (req, res) => {
 
 });
 
-const server = app.listen(4040, () => {
+const server = app.listen(PORT, () => {
     console.log('listening on port 4040');
 });
 
